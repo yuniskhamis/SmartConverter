@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Smart Converter</string>
+    <string name="selected_item">Selected item:</string>
+    <string name="smart_converter">Smart Converter</string>
+    <string name="reset_button">RESET</string>
+    <string name="convert_button">CONVERT</string>
+    <string name="type_text">Type</string>
+    <string name="result_text">Result</string>
+    <string name="enter_conversion_type">Enter Conversion Type</string>
+    <string-array name="Conversions">
+        <item>Fahrenheit to Celsius</item>
+        <item>Celsius to Fahrenheit</item>
+        <item>USD to EUR</item>
+        <item>EUR to USD</item>
+        <item>lb to kg</item>
+        <item>kg to lb</item>
+    </string-array>
+</resources>
