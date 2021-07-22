@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.*
+import java.lang.Exception
 
 class MainActivity : AppCompatActivity() {
 
@@ -124,45 +125,76 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun convertFahrenheitToCelsius() {
+        try {
+            val celsiusResult: Float = (input.text.toString().toFloat() - 32) * 5 / 9
+            resultText.text = celsiusResult.toString()
+        } catch (NumberFormatException: Exception) {
+            val toast = Toast.makeText(this, "Enter an Integer date type, you entered a string", Toast.LENGTH_SHORT)
+            toast.show()
 
-        val celsiusResult: Float = (input.text.toString().toFloat() - 32) * 5 / 9
-        resultText.text = celsiusResult.toString()
+        }
 
     }
 
     fun convertCelsiusToFahrenheit() {
-        if (input.text != null) {
+        // if (input.text != null) {
+        try {
             val fahrenheitResult: Float = (input.text.toString().toFloat() * 9 / 5) + 32
             resultText.text = fahrenheitResult.toString()
+        } catch (NumberFormatException: Exception) {
+            val toast = Toast.makeText(this, "Enter an Integer date type, you entered a string", Toast.LENGTH_SHORT)
+            toast.show()
+
         }
+        //}
     }
 
     fun convertPoundsToKilograms() {
+        try {
+            val eurosResult: Double = (input.text.toString().toDouble() / 2.2046)
+            resultText.text = eurosResult.toString()
+        } catch (NumberFormatException: Exception) {
+            val toast = Toast.makeText(this, "Enter an Integer date type, you entered a string", Toast.LENGTH_SHORT)
+            toast.show()
 
-        val eurosResult: Double = (input.text.toString().toDouble() / 2.2046)
-        resultText.text = eurosResult.toString()
+        }
 
     }
 
     fun convertKilogramsToPounds() {
+        try {
+            val eurosResult: Double = (input.text.toString().toDouble() * 2.2046)
+            resultText.text = eurosResult.toString()
+        } catch (NumberFormatException: Exception) {
+            val toast = Toast.makeText(this, "Enter an Integer date type, you entered a string", Toast.LENGTH_SHORT)
+            toast.show()
 
-        val eurosResult: Double = (input.text.toString().toDouble() * 2.2046)
-        resultText.text = eurosResult.toString()
-
+        }
     }
 
     fun convertEurosToUsDollars() {
+        try {
+            val eurosResult: Double = (input.text.toString().toDouble() / 0.823445)
+            resultText.text = eurosResult.toString()
 
-        val eurosResult: Double = (input.text.toString().toDouble() / 0.823445)
-        resultText.text = eurosResult.toString()
+        } catch (NumberFormatException: Exception) {
+            val toast = Toast.makeText(this, "Enter an Integer date type, you entered a string", Toast.LENGTH_SHORT)
+            toast.show()
 
+        }
     }
 
     fun convertUsDollarsToEuros() {
+        try {
+            val eurosResult: Double = (input.text.toString().toDouble() * 0.823445)
+            resultText.text = eurosResult.toString()
+        } catch (NumberFormatException: Exception) {
+            val toast = Toast.makeText(this, "Enter an Integer date type, you entered a string", Toast.LENGTH_SHORT)
+            toast.show()
 
-        val eurosResult: Double = (input.text.toString().toDouble() * 0.823445)
-        resultText.text = eurosResult.toString()
-
+        }
     }
-
 }
+
+
+
